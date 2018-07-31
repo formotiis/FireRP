@@ -125,11 +125,23 @@ public class BattleOracle {
             att = attack.getFullAtk() + (w.getMight()+triangleBonus(attack,defense))*defense.effectiveness(w);
 
             if (d == DamageType.Physical){
-                def = defense.getFullDef();
+
+                if (attack.getEquiped().getAttributes().contains(Attribute.IgnoresArmor)) {
+                    def = 0;
+                } else {
+                    def = defense.getFullDef();
+                }
             } else if (d == DamageType.Magic){
                 def = defense.getFullRes();
             } else {
-                def = defense.getFullRes()/2 + defense.getFullDef()/2;
+                if (attack.getEquiped().getAttributes().contains(Attribute.IgnoresArmor)){
+                    def = defense.getFullRes() / 2;
+                } else {
+                    def = defense.getFullRes() / 2 + defense.getFullDef() / 2;
+                }
+            }
+            if (attack.getEquiped().getAttributes().contains(Attribute.IgnoresArmor)){
+                def =0;
             }
         }
         total = att-def;

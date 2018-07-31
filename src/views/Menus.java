@@ -4,6 +4,7 @@ import data.DataCenter;
 import data.items.consumables.*;
 import data.items.weapons.monsterweapons.Dragonstone;
 import data.items.weapons.monsterweapons.RottenClaw;
+import data.items.weapons.monsterweapons.UnstableWretchedAir;
 import data.items.weapons.swords.*;
 import entities.monsters.Revenant;
 
@@ -98,6 +99,9 @@ public class Menus {
         jMenu.add(jMenuItem);
         jMenuItem = new JMenuItem(RottenClaw.name);
         jMenuItem.addActionListener(actionListener -> m.addItem(i,new RottenClaw()));
+        jMenu.add(jMenuItem);
+        jMenuItem = new JMenuItem(UnstableWretchedAir.name);
+        jMenuItem.addActionListener(actionListener -> m.addItem(i,new UnstableWretchedAir()));
         jMenu.add(jMenuItem);
 
         jm.add(jMenu);

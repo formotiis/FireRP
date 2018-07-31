@@ -9,21 +9,44 @@ public class EntityViewer {
     private JLabel unitName;
     private JSpinner curHP;
     private JSpinner mxHP;
-    private JSpinner spinner1;
-    private JSpinner spinner2;
-    private JSpinner spinner3;
-    private JSpinner spinner4;
-    private JSpinner spinner5;
-    private JSpinner spinner6;
+    private JSpinner atkSpin;
+    private JSpinner luckSpin;
+    private JSpinner skillSpin;
+    private JSpinner defSpin;
+    private JSpinner resSpin;
+    private JSpinner speedSpin;
     private JCheckBox slot0Eq;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
-    private JComboBox comboBox4;
-    private JComboBox comboBox5;
-    private JSpinner spinner7;
+    private JComboBox itemList0;
+    private JComboBox itemList1;
+    private JComboBox itemList2;
+    private JComboBox itemList3;
+    private JComboBox itemList4;
+    private JSpinner item0Charges;
     private JCheckBox slot1Eq;
     private JCheckBox slot2Eq;
     private JCheckBox slot3Eq;
     private JCheckBox slot4Eq;
+    private JSpinner mSwordspin;
+    private JSpinner mSpearspin;
+    private JSpinner mAxespin;
+    private JSpinner mBowspin;
+    private JSpinner mStaffspin;
+    private JSpinner mAnimaspin;
+    private JSpinner mDarkspin;
+    private JSpinner mLightspin;
+    private JLabel mSwordL;
+    private JLabel mSpearL;
+    private JLabel mAxeL;
+    private JLabel mBowL;
+    private JLabel mStaffL;
+    private JLabel mAnimaL;
+    private JLabel mDarkL;
+    private JLabel mLightL;
+    private JSpinner item1Charges;
+    private JSpinner item2Charges;
+    private JSpinner item3Charges;
+    private JSpinner item4Charges;
+
+
+
 }
