@@ -6,6 +6,7 @@ import data.maps.Square;
 import entities.Entity;
 import entities.players.Player;
 import views.BattleWindow;
+import views.EntityViewer;
 import views.ViewMap;
 
 import javax.swing.*;
@@ -120,6 +121,12 @@ public class DataCenter extends Observable {
         } else if (action == Action.Battle){
             new BattleWindow(selectedEntity, currentMap.enAt(w,l),
                     (int)currentMap.findEntity(selectedEntity).distance(w,l));
+        }else if (action == Action.UnitViewer){
+            if (currentMap.enAt(w,l)!=null){
+                new EntityViewer(this, currentMap.enAt(w,l));
+            } else if (selectedEntity!=null){
+                new EntityViewer(this, selectedEntity);
+            }
         }
     }
 

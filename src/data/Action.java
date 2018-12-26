@@ -1,5 +1,5 @@
 package data;
 
 public enum Action {
-    EditMap, PlaceEntity, Battle, AutoPlace;
+    EditMap, PlaceEntity, Battle, AutoPlace, UnitViewer
 }

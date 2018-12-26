@@ -1,5 +1,6 @@
 package entities;
 
+import data.DataCenter;
 import data.Stats;
 import data.WeaponRank;
 import data.classes.Job;
@@ -55,6 +56,10 @@ public class Entity {
 
     protected void hpReset(){
         this.currentHP = stats.get(Stats.Hp);
+    }
+
+    public void setCurrentHP(int v){
+        this.currentHP = v;
     }
 
     public void printStats(){
@@ -395,8 +400,36 @@ public class Entity {
             ((Consumable)this.selected).use(this);
     }
 
+    public void setStat(Stats s, int value){
+        this.stats.put(s, value);
+        gain(s,0);
+        if (s.equals(Stats.Hp)){
+            gainHP(0);
+        }
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     @Override
     public String toString() {
         return "Entity";
     }
+
+
+    public int getEquipedSlot(){
+        for (int i  = 0; i<5;i++){
+            if (equiped.equals(items[i])){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
 }
